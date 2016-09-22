@@ -3,9 +3,22 @@
 from pyrob.api import *
 
 
-@task
+@task (delay=0.01)
 def task_8_28():
-    pass
+       while not wall_is_on_the_left():
+            move_left()
+       while not wall_is_on_the_right():
+           if not wall_is_above():
+
+               while not wall_is_above():
+                   move_up()
+               while not wall_is_on_the_left():
+                   move_left()
+               break
+           move_right()
+
+
+
 
 
 if __name__ == '__main__':
