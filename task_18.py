@@ -16,6 +16,14 @@ def task_8_28():
                    move_left()
                break
            move_right()
+       if wall_is_on_the_right:
+           if not wall_is_above():
+
+               while not wall_is_above():
+                   move_up()
+               while not wall_is_on_the_left():
+                   move_left()
+
 
 
 
