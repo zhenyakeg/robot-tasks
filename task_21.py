@@ -3,9 +3,21 @@
 from pyrob.api import *
 
 
-@task(delay=0.05)
+@task(delay=0.005)
 def task_4_11():
-    pass
+    move_right()
+    move_down()
+    k=13
+    for i in range (13):
+        for j in range (k):
+            fill_cell()
+            move_down()
+        if i==12:
+            break
+        move_up(12-i)
+        move_right()
+        k-=1
+    move_left(12)
 
 
 if __name__ == '__main__':
